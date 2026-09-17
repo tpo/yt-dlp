@@ -1819,6 +1819,7 @@ from .sproutvideo import (
     SproutVideoIE,
     VidsIoIE,
 )
+from .srf import SRFIE
 from .srgssr import (
     SRGSSRIE,
     SRGSSRPlayIE,
