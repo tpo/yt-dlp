@@ -13,6 +13,10 @@
 </div>
 <!-- MANPAGE: END EXCLUDED SECTION -->
 
+This is a fork of yt-dlp that includes support for http://srf.ch. I did not push the support for srf.ch upstream because I've created it with Claude and upstream doesn't want AI contributions.
+
+This fork gets rebased on top of upstream daily.
+
 yt-dlp is a feature-rich command-line audio/video downloader with support for [thousands of sites](supportedsites.md). The project is a fork of [youtube-dl](https://github.com/ytdl-org/youtube-dl) based on the now inactive [youtube-dlc](https://github.com/blackjack4494/yt-dlc).
 
 <!-- MANPAGE: MOVE "USAGE AND OPTIONS" SECTION HERE -->
