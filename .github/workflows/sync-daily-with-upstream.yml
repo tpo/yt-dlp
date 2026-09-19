@@ -1,0 +1,38 @@
+# done by Claude
+name: Sync fork with upstream
+
+on:
+  schedule:
+    - cron: '9 9 * * *'   # once a day at a randomly chosen time
+  workflow_dispatch:        # lets you trigger it manually too
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Add upstream remote
+        run: git remote add upstream https://github.com/yt-dlp/yt-dlp.git
+      
+      - name: Fetch upstream
+        run: git fetch upstream master                                                  
+                                                                                        
+      - name: Rebase onto upstream/master                                               
+        run: git pull --rebase upstream master                                          
+                                                                                        
+      - name: Push rebased branch                                                       
+        run: git push origin master --force-with-lease                                  
+
