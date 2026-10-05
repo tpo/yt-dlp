@@ -10,15 +10,16 @@ class SRFIE(InfoExtractor):
     _VALID_URL = r'https?://(?:www\.)?srf\.ch/(?!play/)(?:[^/?#]+/)*(?P<id>[^/?#]+)'
     _TESTS = [{
         # single embed via player-widget
-        'url': 'https://www.srf.ch/news/international/kosovo-tribunal-hashim-thaci-verurteilt-wie-das-urteil-das-kosovo-veraendert',
+        'url': 'https://www.srf.ch/play/radio/popupaudioplayer?id=86cd168b-04ea-3933-baac-b2e3ef4d8599',
         'info_dict': {
-            'id': '388214a2-9dff-3408-87ba-c5f08c193e50',
+            'id': '86cd168b-04ea-3933-baac-b2e3ef4d8599',
             'ext': 'mp3',
-            'title': 'Thaci wegen Kriegsverbrechen verurteilt',
-            'duration': 217.656,
+            'title': 'Schulproteste in Frankreich: Was steckt hinter der Wut?',
+            'duration': 733.032,
             'thumbnail': r're:^https?://download-media\.srf\.ch/.+\.jpg$',
-            'timestamp': 1789574400,
-            'upload_date': '20260916',
+            'timestamp': 1791207000,
+            'upload_date': '20261005',
+            'description': "Doch angefangen hat das Ganze \u00fcberhaupt nicht mit Sch\u00fclerprotesten, die ARD-Korrespondentin in Frankreich, Julia Borutta. Sie erkl\u00e4rt auch, wie sie die Situation erlebt und wie die Regierung nun inhaltlich auf die Forderungen reagieren will. Auch sagen Sch\u00fclerinnen und Lehrperson, weshalb sie auf die Strasse gehen.\n____________________\n\nHabt Ihr Fragen oder Themen-Inputs? Schreibt uns gerne per Mail an newsplus@srf.ch oder sendet uns eine Sprachnachricht an 076 320 10 37.\n____________________\n\nIn dieser Episode zu h\u00f6ren:\n- Julia Borutta, ARD Frankreich-Korrespondentin \n___________________\n\nTeam:\n- Moderation: Susanne St\u00f6ckl\n- Produktion: Lea Saager\n- Mitarbeit: Martina Koch \n____________________\n\nDas ist \u00abNews Plus\u00bb:\nIn einer Viertelstunde die Welt besser verstehen \u2013 ein Thema, neue Perspektiven und Antworten auf eure Fragen. Unsere Korrespondenten und Expertinnen aus der Schweiz und der Welt erkl\u00e4ren, analysieren und erz\u00e4hlen, was sie bewegt. \u00abNews Plus\u00bb von SRF erscheint immer von Montag bis Freitag um 16 Uhr rechtzeitig zum Feierabend."
         },
         'params': {'skip_download': True},
     }, {
